@@ -34,6 +34,8 @@ main{
   border-radius: 10px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   color: #444;
+  max-width: 30rem;
+  min-width: 30rem;
 }
 
 label{
@@ -108,4 +110,34 @@ a {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   color: #444;
   max-width: 30rem;
+}
+
+@media only screen and (max-width: 768px) {
+  label{
+    font-size:1rem;
+  }
+  input{
+    font-size: 1rem;
+  }
+  body {
+    font-size: 10px;
+  }
+
+  main {
+    width: 95%;
+  }
+
+  .container {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .buttons {
+    max-width: 70%;
+  }
+
+  .main-text {
+    max-width: 100%;
+  }
 }

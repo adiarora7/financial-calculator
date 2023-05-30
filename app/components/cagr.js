@@ -54,7 +54,7 @@ export default function CAGRCalculator(){
       }, [initialValue, finalValue, years]);
   
     return (
-      <div className='container' style={{ minWidth:"30rem", maxWidth:'30rem'}}>
+      <div className='container'>
         <h2 style={{paddingBottom:"1.5rem", color:"#004687"}}>CAGR Calculator</h2>
         <label>
           Investment Name:
