@@ -115,6 +115,11 @@ a {
   max-width: 30rem;
 }
 
+p{
+  font-size:1.1rem;
+  
+}
+
 @media only screen and (max-width: 768px) {
   label{
     font-size:1rem;

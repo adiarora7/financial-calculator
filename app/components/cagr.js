@@ -111,6 +111,7 @@ export default function CAGRCalculator(){
             <button onClick={handleSave} style={{marginTop:"1rem", marginBottom:"1rem"}}>Save</button>
             <button onClick={handleReset} style={{marginTop:"1rem", marginBottom:"1rem"}}>Reset</button>
         </div>
+        <br/>
         <h3 style={{color:"#444"}}>Saved CAGR values:</h3>
         <ul>
             {savedCAGR.map((investment, index) => (
