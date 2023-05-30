@@ -40,8 +40,11 @@ main{
 
 label{
   font-size: 1.15rem;
+  padding: 0.25rem;
   display: flex;
   justify-content: space-between;
+  border: 1px solid rgba(211, 211, 211, 0.495);
+  border-radius: 8px;
 }
 
 input::-webkit-outer-spin-button,
