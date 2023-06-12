@@ -1,20 +1,90 @@
-import Image from 'next/image'
-import CAGRCalculator from './components/cagr'
+'use client'
+import { Card, Spacer, Text } from '@nextui-org/react'
+import Link from 'next/link'
+import Header from './components/header'
 
 export default function Home() {
 
   return (
     <main>
-      <br/>
-      <CAGRCalculator/>
-      <br/>
-      <div className='main-text'>
-        <p>The CAGR calculator is a useful tool for anyone who wants to estimate the gain from an investment. This application bases its calculations on the Compound Annual Growth Rate formula (CAGR formula). If you know how to calculate the growth rate, you can determine the profit of your investment over a particular period. 
-         <br/><br/>
-         *To save an investments CAGR value, a name must be provided for the Investment Name.
-         <br/>
-         </p>
-      </div>
+      <Header/>
+       <div className="homepage">
+        <h2>General Investment Calculators</h2>
+        <div className='cards-flex-row'>
+          <Card
+            className='card'
+            isPressable
+            isHoverable
+            variant="bordered"
+            css={{ mw: "400px", height:"100px"}}
+          >
+            <Card.Body>
+              <Link href="/calculators/cagr"><Text>CAGR</Text></Link>
+            </Card.Body>
+          </Card>
+          <Spacer x={2}/>
+          <Card
+            className='card'
+            isPressable
+            isHoverable
+            variant="bordered"
+            css={{ mw: "400px" }}
+          >
+            <Card.Body>
+              <Link href="/calculators/npv"><Text>NPV</Text></Link>
+            </Card.Body>
+          </Card>
+          <Spacer x={2} />
+          <Card
+            className='card'
+            isPressable
+            isHoverable
+            variant="bordered"
+            css={{ mw: "400px" }}
+          >
+            <Card.Body>
+              <Link href="/calculators/cagr"><Text>MVA</Text></Link>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className='cards-flex-row'>
+          <Card
+            className='card'
+            isPressable
+            isHoverable
+            variant="bordered"
+            css={{ mw: "400px", height:"100px" }}
+          >
+            <Card.Body>
+              <Link href="/calculators/cagr"><Text>Capital Gains Yield</Text></Link>
+            </Card.Body>
+          </Card>
+          <Spacer x={2} />
+          <Card
+            className='card'
+            isPressable
+            isHoverable
+            variant="bordered"
+            css={{ mw: "400px"}}
+          >
+            <Card.Body>
+              <Link href="/calculators/cagr"><Text>Jensens Alpha</Text></Link>
+            </Card.Body>
+          </Card>
+          <Spacer x={2} />
+          <Card
+            className='card'
+            isPressable
+            isHoverable
+            variant="bordered"
+            css={{ mw: "400px"}}
+          >
+            <Card.Body>
+              <Link href="/calculators/cagr"><Text>Sharpe Ratio</Text></Link>
+            </Card.Body>
+          </Card>
+        </div>
+      </div> 
     </main>
   )
 }

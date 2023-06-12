@@ -9,8 +9,8 @@ export default function CAGRCalculator(){
     const [years, setYears] = useState('');
     const [cagr, setCAGR] = useState(0);
 
-    const [savedCAGR, setSavedCAGR] = useState([]);
-    const [investmentName, setInvestmentName] = useState('');
+    // const [savedCAGR, setSavedCAGR] = useState([]);
+    // const [investmentName, setInvestmentName] = useState('');
   
     const calculate=()=>{
       const initial = parseFloat(initialValue);
@@ -21,32 +21,32 @@ export default function CAGRCalculator(){
 
       if (initial && final && n) {
         const cagrValue = ((final / initial) ** (1 / n) - 1) * 100;
-        setCAGR(cagrValue.toFixed(2));
+        setCAGR(cagrValue.toFixed(4));
       } else {
         setCAGR(0);
       }
     }
 
-    const handleSave = () => {
-        if (cagr && investmentName) {
-            const savedInvestment = {
-            name: investmentName,
-            cagr: cagr
-            };
-        setSavedCAGR(prevSavedCAGR => [...prevSavedCAGR, savedInvestment]);
-        setInvestmentName('');
-        setInitialValue('');
-        setFinalValue('');
-        setYears('');
-        setCAGR(0);
-        }
+    // const handleSave = () => {
+    //     if (cagr && investmentName) {
+    //         const savedInvestment = {
+    //         name: investmentName,
+    //         cagr: cagr
+    //         };
+    //     setSavedCAGR(prevSavedCAGR => [...prevSavedCAGR, savedInvestment]);
+    //     setInvestmentName('');
+    //     setInitialValue('');
+    //     setFinalValue('');
+    //     setYears('');
+    //     setCAGR(0);
+    //     }
 
-    };
+    // };
 
 
-    const handleReset = () => {
-        setSavedCAGR([]);
-    }
+    // const handleReset = () => {
+    //     setSavedCAGR([]);
+    // }
     
 
     useEffect(() => {
@@ -54,9 +54,9 @@ export default function CAGRCalculator(){
       }, [initialValue, finalValue, years]);
   
     return (
-      <div className='container'>
-        <h2 style={{paddingBottom:"1.5rem", color:"#004687"}}>CAGR Calculator</h2>
-        <label>
+      <div className='calculator'>
+        {/* <h2 style={{paddingBottom:"1.5rem", color:"#004687"}}>CAGR Calculator</h2> */}
+        {/* <label>
           Investment Name:
           <div className='input'>
             <input
@@ -65,8 +65,7 @@ export default function CAGRCalculator(){
                 onChange={(e) => setInvestmentName(e.target.value)}
             />
           </div>
-        </label>
-        <br />
+        </label> */}
         <label>
           Initial Value:
           <div className='input'>
@@ -78,7 +77,7 @@ export default function CAGRCalculator(){
             <span>$</span>
           </div>
         </label>
-        <br />
+        <hr/>
         <label>
           Final Value:
           <div className='input'>
@@ -90,7 +89,7 @@ export default function CAGRCalculator(){
             <span>$</span>
            </div>
         </label>
-        <br />
+        <hr/>
         <label>
           Number of Years:
           <input
@@ -101,17 +100,17 @@ export default function CAGRCalculator(){
                     paddingRight:'5%'}}
           />
         </label>
-        <br/>
-        <div style={{fontSize:"1.2rem",display:"flex", justifyContent:"space-between"}}>
-          <div>CAGR:</div><div>{cagr}%</div>  
+        <hr/>
+       
+        <div className="result">
+          <label>CAGR:</label>{cagr}%
         </div>
-        
-        <br/>
-        <div className='buttons'>
+
+        {/* <div className='buttons'>
             <button onClick={handleSave} style={{marginTop:"1rem", marginBottom:"1rem"}}>Save</button>
             <button onClick={handleReset} style={{marginTop:"1rem", marginBottom:"1rem"}}>Reset</button>
-        </div>
-        <br/>
+        </div> */}
+        {/* <br/>
         <h3 style={{color:"#444"}}>Saved CAGR values:</h3>
         <ul>
             {savedCAGR.map((investment, index) => (
@@ -119,7 +118,7 @@ export default function CAGRCalculator(){
                 Investment {index + 1}: {investment.name} - {investment.cagr}%
             </li>
             ))}
-        </ul>
+        </ul> */}
       </div>
     );
 }
