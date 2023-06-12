@@ -14,7 +14,6 @@ export default function Home() {
         <div className="body">
           <div className="left-side">
             <CAGRCalculator/>
-            <h3>How to use:</h3>
             <p>Fill in the first 3 values and the result will be displayed in the CAGR value line.
 
             </p>
