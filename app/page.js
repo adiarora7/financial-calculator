@@ -15,32 +15,21 @@ export default function Home() {
             <Link href="/calculators/cagr" className='card'>
                 <p>CAGR</p>
             </Link>
-            <Link href="/calculators/npv" className='card'>
-                <p>NPV</p>
-            </Link>
-            <Link href="/calculators/mva" className='card'>
+            <Link href="/calculators/cagr" className='card'>
                 <p>MVA</p>
             </Link>
-          </div>
-          <div className='cards-flex-row'>
             <Link href="/calculators/cagr" className='card'>
-                <p>Jensens</p>
-            </Link>
-            <Link href="/calculators/npv" className='card'>
-                <p>Sharpe Ratio</p>
-            </Link>
-            <Link href="/calculators/mva" className='card'>
-                <p>Capital Gains Yield</p>
+                <p>NPV</p>
             </Link>
           </div>
           <div className='cards-flex-row'>
             <Link href="/calculators/cagr" className='card'>
                 <p>Jensens</p>
             </Link>
-            <Link href="/calculators/npv" className='card'>
+            <Link href="/calculators/cagr" className='card'>
                 <p>Sharpe Ratio</p>
             </Link>
-            <Link href="/calculators/mva" className='card'>
+            <Link href="/calculators/cagr" className='card'>
                 <p>Capital Gains Yield</p>
             </Link>
           </div>

@@ -1,5 +1,5 @@
 'use client'
-import CAGRCalculator from "@/app/components/cagr"
+import NPVCalculator from "@/app/components/npv"
 import Link from "next/link"
 import Header2 from "@/app/components/header2"
 
@@ -13,7 +13,7 @@ export default function Home() {
           </Link>
           <div className="body">
             <div className="left-side">
-              <CAGRCalculator/>
+              <NPVCalculator/>
               <p>Fill in the first 3 values and the result will be displayed in the CAGR value line.
               </p>
             </div>
