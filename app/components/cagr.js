@@ -70,6 +70,7 @@ export default function CAGRCalculator(){
           Initial Value:
           <div className='input'>
             <input
+                pattern="[0-9]*"
                 type="number"
                 value={initialValue}
                 onChange={(e) => setInitialValue(e.target.value)}
@@ -82,6 +83,7 @@ export default function CAGRCalculator(){
           Final Value:
           <div className='input'>
             <input
+                pattern="[0-9]*"
                 type="number"
                 value={finalValue}
                 onChange={(e) => setFinalValue(e.target.value)}
@@ -93,6 +95,7 @@ export default function CAGRCalculator(){
         <label>
           Number of Years:
           <input
+            pattern="[0-9]*"
             type="number"
             value={years}
             onChange={(e) => setYears(e.target.value)}
