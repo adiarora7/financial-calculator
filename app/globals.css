@@ -384,7 +384,7 @@ input[type="text"]{
   }
 
   p{
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .cards{
@@ -433,6 +433,11 @@ input[type="text"]{
     flex-direction: column;
     align-content:center;
   }
+
+  .calculator-page h2{
+    margin-top:1rem;
+    padding:0;
+  }
   .left-side, .description{
     width: 100%;
   }
@@ -447,10 +452,15 @@ input[type="text"]{
   .description{
     padding: 0 0.5rem;
   }
+  .description p{
+    color:#222;
+  }
   .calculator{
     margin-bottom:0.5rem;
     box-shadow: none;
     border-radius: 0;
+    border-left: 0;
+    border-right: 0;
   }
   label{
     font-size: 1.1rem;

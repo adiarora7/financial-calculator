@@ -33,6 +33,17 @@ export default function Home() {
                 <p>Capital Gains Yield</p>
             </Link>
           </div>
+          <div className='cards-flex-row'>
+            <Link href="/calculators/cagr" className='card'>
+                <p>Jensens</p>
+            </Link>
+            <Link href="/calculators/npv" className='card'>
+                <p>Sharpe Ratio</p>
+            </Link>
+            <Link href="/calculators/mva" className='card'>
+                <p>Capital Gains Yield</p>
+            </Link>
+          </div>
         </div>
       </div> 
     </main>
