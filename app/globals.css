@@ -487,6 +487,6 @@ input[type="text"]{
 }
 @media(max-width: 320px){
   header{
-    height: 292px;
+    height: 300px;
   }
 }
